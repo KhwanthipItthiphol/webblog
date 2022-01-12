@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
         <a class="navbar-brand" href="#">My Hello</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,40 +33,39 @@
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </nav>
       <main role="main">
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
+        <div style="background-color: rgb(161, 217, 219);" class="jumbotron">
           <div class="container">
-            <h1 class="display-3">ผลงานและงานวิจัย</h1>
+            <h1 style="color:midnightblue;" class="display-4">สถานที่ท่องเที่ยวภาคกลาง</h1>
           </div>
         </div>
       
         <div class="container">
           <!-- Example row of columns -->
           {% for post in test %}
-            <div class="row-fluid pb-3">
+          <div class="row-fluid pb-3">
               <div class="card">
-                <div class="card-header">
-                    ผลงานและงานวิจัย
-                </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{post.title}}</h5>
+                  <div class="alert alert-info" role="alert">
+                  <h5 >{{post.title}}</h5>
+                  </div>
                     <p class="card-text">{{post.body}}</p>
-                    <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
+                    <button type="button" class="btn btn-info">ดูรายละเอียด</button>
                 </div>
-            </div>
+            </div>            
           </div>
             {% endfor %}
             <hr>
       
         </div> <!-- /container -->
       </main>
-      <footer class="container">
+      <footer style="color:rgb(11, 108, 121);" class="container">
         <p>&copy; SciTech STOU 2022</p>
       </footer>
     
